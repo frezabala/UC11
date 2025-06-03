@@ -19,21 +19,21 @@ public class Estoque {
 
     public void AdicionarProduto(String nome, int quantidade) {
         for (Produto produto : produtos) {
-            if (produto.getName().equals(nome)) {
+            if (produto.getName().equalsIgnoreCase(nome)) {
                 produto.adicionarQuantidade(quantidade);
                 return;
 
             }
         }
         produtos.add(new Produto(nome, quantidade));
-    }
+    } 
 
     public void removeProduto(String nome, int quantidade) {
-        for (Produto produto : produtos) {
-            if (produto.getName().equals(nome)) {
-                produto.removerQuantidade(quantidade);
-                if (produto.getQuantidade() == 0) {
-                    produtos.remove(produto);
+        for (Produto prod : produtos) {
+            if (prod.getName().equals(nome)) {
+                prod.removerQuantidade(quantidade);
+                if (prod.getQuantidade() == 0) {
+                    produtos.remove(prod);
                 }
                 return;
             }
@@ -52,7 +52,7 @@ public class Estoque {
 
     public String produtoMaisEstocado() {
         if (produtos.isEmpty()) {
-            return null;
+            return "estoque vazio";
         }
         Produto maisEstocado = produtos.get(0);
         for (Produto produto : produtos) {

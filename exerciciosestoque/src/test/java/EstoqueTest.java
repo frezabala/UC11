@@ -28,13 +28,20 @@ public class EstoqueTest {
     }
 
     @Test
-    public void testAdicionarProduto() {
+    public void testAdicionarProdutoNovo() {
         estoque.AdicionarProduto("Produto A", 10);
         assertEquals(10, estoque.consultarQuantidade("Produto A"));
     }
+    
+     @Test
+    public void testAdicionarProdutoExistente() {
+        estoque.AdicionarProduto("arroz", 10);
+        estoque.AdicionarProduto("arroz", 5);
+        assertEquals(15, estoque.consultarQuantidade("arroz"));
+    }
 
     @Test
-    public void testRemoverProduto() {
+    public void testRemoverProdutoComSuceso() {
         estoque.AdicionarProduto("Produto A", 10);
         estoque.removeProduto("Produto A", 5);
         assertEquals(5, estoque.consultarQuantidade("Produto A"));
@@ -56,6 +63,17 @@ public class EstoqueTest {
         });
         assertEquals("Quantidade a remover é maior que a disponível.", exception.getMessage());
     }
+    
+        @Test
+    public void testConsultarQuantidadeProduto() {
+        estoque.AdicionarProduto("banana", 50);
+        assertEquals(50, estoque.consultarQuantidade("banana"));
+    }
+
+    @Test
+    public void testConsultarQuantidadeProdutoInexistente() {
+        assertEquals(0, estoque.consultarQuantidade("banana"));
+    }
 
     @Test
     public void testProdutoMaisEstocado() {
@@ -64,7 +82,7 @@ public class EstoqueTest {
         assertEquals("Produto B", estoque.produtoMaisEstocado());
     }
 
-     @AfterEach
+    @Test
     public void testLimparEstoque() {
         estoque.AdicionarProduto("Produto A", 10);
         estoque.limparEstoque();
