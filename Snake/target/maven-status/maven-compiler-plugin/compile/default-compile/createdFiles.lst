@@ -1,0 +1,5 @@
+com\mycompany\snake\Snake.class
+com\mycompany\snake\SnakeDraw.class
+com\mycompany\snake\MovementAndCollision.class
+com\mycompany\snake\SnakeGame$Tile.class
+com\mycompany\snake\SnakeGame.class

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="EstoqueTest" time="0.047" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="EstoqueTest" time="0.053" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
-    <property name="sun.java.command" value="C:\Users\FRELIANNYSISMELIALOP\AppData\Local\Temp\surefire14284311954130817116\surefirebooter-20250602170605087_3.jar C:\Users\FRELIANNYSISMELIALOP\AppData\Local\Temp\surefire14284311954130817116 2025-06-02T17-06-04_793-jvmRun1 surefire-20250602170605087_1tmp surefire_0-20250602170605087_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\FRELIANNYSISMELIALOP\AppData\Local\Temp\surefire11279079291850693897\surefirebooter-20250603165924983_3.jar C:\Users\FRELIANNYSISMELIALOP\AppData\Local\Temp\surefire11279079291850693897 2025-06-03T16-59-24_703-jvmRun1 surefire-20250603165924983_1tmp surefire_0-20250603165924983_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="EstoqueTest"/>
     <property name="surefire.test.class.path" value="C:\Users\FRELIANNYSISMELIALOP\Documents\NetBeansProjects\exerciciosestoque\target\test-classes;C:\Users\FRELIANNYSISMELIALOP\Documents\NetBeansProjects\exerciciosestoque\target\classes;C:\Users\FRELIANNYSISMELIALOP\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar;C:\Users\FRELIANNYSISMELIALOP\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\FRELIANNYSISMELIALOP\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\FRELIANNYSISMELIALOP\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\FRELIANNYSISMELIALOP\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\FRELIANNYSISMELIALOP\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar;C:\Users\FRELIANNYSISMELIALOP\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\FRELIANNYSISMELIALOP\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\FRELIANNYSISMELIALOP\AppData\Local\Temp\surefire14284311954130817116\surefirebooter-20250602170605087_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\FRELIANNYSISMELIALOP\AppData\Local\Temp\surefire11279079291850693897\surefirebooter-20250603165924983_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="23.0.2+7-58"/>
@@ -60,9 +60,13 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="testAdicionarProduto" classname="EstoqueTest" time="0.031"/>
-  <testcase name="testRemoverProdutoInexistente" classname="EstoqueTest" time="0"/>
-  <testcase name="testRemoverProduto" classname="EstoqueTest" time="0"/>
+  <testcase name="testRemoverProdutoComSuceso" classname="EstoqueTest" time="0.028"/>
+  <testcase name="testRemoverProdutoInexistente" classname="EstoqueTest" time="0.002"/>
+  <testcase name="testAdicionarProdutoExistente" classname="EstoqueTest" time="0.001"/>
+  <testcase name="testLimparEstoque" classname="EstoqueTest" time="0"/>
+  <testcase name="testAdicionarProdutoNovo" classname="EstoqueTest" time="0"/>
   <testcase name="testProdutoMaisEstocado" classname="EstoqueTest" time="0"/>
   <testcase name="testRemoverQuantidadeMaiorQueDisponivel" classname="EstoqueTest" time="0"/>
+  <testcase name="testConsultarQuantidadeProdutoInexistente" classname="EstoqueTest" time="0.001"/>
+  <testcase name="testConsultarQuantidadeProduto" classname="EstoqueTest" time="0.001"/>
 </testsuite>
