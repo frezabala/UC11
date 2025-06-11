@@ -1,6 +1,8 @@
 
 import com.mycompany.snake.Snake;
 import com.mycompany.snake.SnakeGame;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,30 +18,66 @@ import org.junit.jupiter.api.Test;
  * @author FRELIANNYSISMELIALOP
  */
 public class testeSnakeGame {
-   public SnakeGame snakeGame;
-    private Snake snake;
+   public SnakeGame sn;
+   
     
-    @BeforeEach	
-    public void setUp(){
-        snake = new Snake();
+  @BeforeEach
+    public void setup() {
+      sn = new SnakeGame(1000,  1000);
+      
+      
     }
 
     @Test
-    public void testBoardSize(){
-   //assertEquals(600,)
+    public void testBoardSize() {
+       assertEquals(1000, sn.boardWidht);
+       assertEquals(1000, sn.boardHeight);
+        
     }
     
     @Test
-    public void testSnakeHeadPosition(){}
+    public void testSnakeHeadPosition() {
+        SnakeGame snakegame = new SnakeGame(600 ,600);
+        int x = snakegame.snakeHead.x;
+        int y = snakegame.snakeHead.y;
+        
+        assertEquals(5 , x);
+         assertEquals(5, y);
+      
+    }
+
+    @Test
+    public void testFoodPosition() {
+         SnakeGame sng = new SnakeGame(600 ,600);
+         int foodx = sng.food.x;
+         int foody = sng.food.y;
+         
+         assertEquals(10, foodx);
+         assertEquals(10, foody);
+         
+        
+        
+        
+    }
     
     @Test
-    public void testFoodPosition(){}
+    public void testGameOver(){
+        assertEquals(sn.gameOver);
     
-    @Test
-    public void testGameOver(){}
+    
+    
+    }
     
     @Test 
-    public void testPlaceFood(){}
+    public void testPlaceFood(){
+        SnakeGame gameSnake = new SnakeGame(600 ,600);
+        
+        
+    
+    
+    
+    
+    }
     
     @Test
     public void testMove(){}
